@@ -1,5 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* Custom Y-axis Scrollbar Styles */
+::-webkit-scrollbar:vertical {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track:vertical {
+    background: #1a1a1a; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background: #555; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 3px solid #1a1a1a; /* Space between thumb and track */
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+    background: #777; /* Color of the scrollbar thumb on hover */
+}
+
+/* Firefox custom scrollbar styles */
+html {
+    scrollbar-width: thin; /* Thin scrollbar width */
+    scrollbar-color: #555 #1a1a1a; /* Thumb color followed by track color */
+}
+
+/* Firefox scrollbar thumb and track styles */
+html::-webkit-scrollbar-track:vertical {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:vertical {
+    background-color: #555;
+    border-radius: 10px;
+    border: 3px solid #1a1a1a;
+}
+
+html::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: #777;
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -7,23 +51,29 @@
 body{
     background-color: black;
     color: white;
+    /* padding-top: 70px; */
  }
 
 .left{
+    position: fixed;
     width: 25vw;
-    min-height: 80vh;
+    min-height: 100vh;
+    overflow-y:auto;
 }
-.home{
+/* .home{
 
-}
+} */
 .right{
     width: 75vw;
-    
+    min-height: 100vh;    
+    margin-left: 390px;
+    position: z;
+    /* overflow: hidden; */
 }
 
 .home ul li{
-    width: 25px;
     list-style: none;
+    width: 25px;
     display: flex;
     gap: 20px;
     padding-top: 19px;
@@ -71,16 +121,31 @@ footer > div{
     width: 30px;
     font-size: 20px;
     height: 18px;
+    
 }
-
+.spotify-playlist{
+    margin-top: 10px;
+}
 .navbar{
+    position: sticky;
+    z-index:600;
     display: flex;
     align-items:center;
     justify-content: space-between;
     background-color: #101010;
-    margin-top: 14px;
+    /* margin-top: 14px; */
+    top: 0;
+    padding: 10px;
     
 }
+/* .nsv{
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    z-index: 600;
+    min-width: 100%;
+
+} */
 .arrows{
     margin: 20px;
     gap: 10px;
@@ -114,7 +179,10 @@ footer > div{
     height: 170px;
     border-radius: 50%;
     margin: 20px;
-    object-fit: contain;
+    /* object-fit: contain;
+     */
+     position: relative;
+     overflow:visible;
 }
 .card1 img{
     border-radius:50%;
@@ -148,11 +216,106 @@ footer > div{
     object-fit: contain;
     height: 170px;
 }
+.popbtn :hover {
+    animation: bubble 0.4s ease-out;
 
-.card1 :hover{
-    background-color: #3d3c3c !important;
+  }
+  
+  @keyframes bubble {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .cards :hover{
+    /* background-color: #3d3c3c !important; */
+
+    animation: bubble 0.4s ease-out;
+}
+.popbtn{
+    position: absolute;
+    /* opacity: 0; */
+    /* right: ; */
+}
+.buttons{
+    right: 0;
+    z-index: 900;
+}
+.popbtn button{
+    background: none;
+    border: none;
+    height: 50px;
+    width: 50px;
 
 }
+.popbtn button img{
+    height: 50px;
+    width: 50px;
+}
+
+.albums{
+    margin-top: 100px;
+    
+}
+
+.cardcont{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    
+
+
+}
+.cardcont :hover{
+    animation: bubble 0.5s ease-out;
+
+}
+
+
+.h2{
+    margin-top: 70px;
+
+}
+.cardcont1{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+.cardcont1 :hover{
+    animation: bubble 0.5s ease-out;
+
+}
+ .album1 img{
+    height:200px ;
+    border-radius: 5px;
+    margin-top: 4px;
+
+} 
+
+.playbar{
+    /* position: absolute; */
+    background-color: #fff;
+    border: 2px solid green;
+    padding: 10px;
+    /* left: 0;
+    bottom: 0; */
+}
+
+
+
+
+
+
+
+
+
 
 
 
