@@ -68,7 +68,7 @@ body{
     min-height: 100vh;    
     margin-left: 390px;
     position: z;
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 .home ul li{
@@ -124,7 +124,7 @@ footer > div{
     
 }
 .spotify-playlist{
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 .navbar{
     position: sticky;
@@ -172,6 +172,13 @@ footer > div{
     font-weight: bold;
     margin-right: 10px;
     border: none;
+}
+.card-container{
+    height: 290px;
+
+}
+p{
+    overflow-y: hidden;
 }
 
 .card{
@@ -260,7 +267,8 @@ footer > div{
 }
 
 .albums{
-    margin-top: 100px;
+    /* margin-top: 100px */
+
     
 }
 
@@ -292,20 +300,28 @@ footer > div{
     animation: bubble 0.5s ease-out;
 
 }
+
+.album1{
+    -webkit-margin-collapse: separate;
+     height: 150px;
+     width: 80vh;
+}
  .album1 img{
-    height:200px ;
+    height:150px;
     border-radius: 5px;
     margin-top: 4px;
 
-} 
+}  
 
 .playbar{
-    /* position: absolute; */
+    position: absolute;
     background-color: #fff;
     border: 2px solid green;
     padding: 10px;
-    /* left: 0;
-    bottom: 0; */
+    bottom: 0;
+    right: 2px;
+    margin-bottom: 10px;
+    width: 75vw;
 }
 
 

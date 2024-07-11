@@ -1,4 +1,6 @@
-
+.gap{
+    gap: 50px;
+}
 
 .flex{
     display: flex;
