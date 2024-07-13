@@ -123,9 +123,9 @@ footer > div{
     height: 18px;
     
 }
-.spotify-playlist{
-    /* margin-top: 10px; */
-}
+/* .spotify-playlist{
+    /* margin-top: 10px; 
+} */
 .navbar{
     position: sticky;
     z-index:600;
@@ -179,6 +179,17 @@ footer > div{
 }
 p{
     overflow-y: hidden;
+}
+
+.Signup:hover{
+    animation: bubble 0.4s ease-out;
+
+
+}
+
+.Login:hover{
+    animation: bubble 0.4s ease-out;
+
 }
 
 .card{
@@ -266,11 +277,11 @@ p{
     width: 50px;
 }
 
-.albums{
-    /* margin-top: 100px */
+/* .albums{
+    margin-top: 100px
 
     
-}
+} */
 
 .cardcont{
     display: flex;
@@ -324,16 +335,16 @@ p{
     width: 75vw;
 }
 
-
-
-
-
-
-
-
-
-
-
+.musiccontrols{
+    gap: 30px;
+    justify-content: center;
+}
+p{
+    overflow:visible;
+}
+h3{
+    overflow:visible;
+}
 
 
 
